@@ -113,4 +113,6 @@ LOCAL_CFLAGS := -Wno-unused-parameter
 #include stlport headers
 include external/stlport/libstlport.mk
 
+LOCAL_CFLAGS := -fno-strict-aliasing
+
 include $(BUILD_EXECUTABLE)
