@@ -622,6 +622,11 @@ LOCAL_CFLAGS += -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=1
 # unecessary log spew when building
 LOCAL_CFLAGS += -Wno-unused-parameter
 
+# FIXME this should really be limited to files that need it, such as
+# src/utils/SkCamera.cpp -- pretty bad violations going on in there,
+# but most of the rest of skia is good
+LOCAL_CFLAGS += -fno-strict-aliasing
+
 LOCAL_LDLIBS += -lpthread
 
 LOCAL_MODULE:= libskia
